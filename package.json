@@ -1,0 +1,23 @@
+{
+  "name": "object-presenter",
+  "version": "1.0.0",
+  "description": "Simple and solid object presenters",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "umbrellio/object-presenter",
+  "author": "Alexander Komarov <ak@akxcv.com>",
+  "keywords": [
+    "presenter",
+    "decorator"
+  ],
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "nyc": "^13.1.0"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  }
+}
