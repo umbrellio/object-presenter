@@ -1,8 +1,9 @@
 {
   "name": "object-presenter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple and solid object presenters",
   "main": "index.js",
+  "es2015": "es6/index.js",
   "license": "MIT",
   "repository": "umbrellio/object-presenter",
   "author": "Alexander Komarov <ak@akxcv.com>",

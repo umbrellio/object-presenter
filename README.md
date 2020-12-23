@@ -37,14 +37,18 @@ const user = new UserPresenter(rawUser)
 console.log(user.fullName) // => Elon Musk
 console.log(user.firstName) // => Elon
 console.log(user.birthdate) // => Jun 28th 71
+
+console.log(user.serialize()) // => { firstName: 'Elon', lastName: 'Musk', fullName: 'Elon Musk', birthdate: 'Jun 28th 71' }
 ```
 
 To use in native ES6, import `object-presenter/es6` instead.
 
 ## License
+
 Released under MIT License.
 
 ## Authors
+
 Created by Alexander Komarov.
 
 <a href="https://github.com/umbrellio/">

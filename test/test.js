@@ -5,9 +5,13 @@ const ObjectPresenterES6 = require('../es6')
 
 ;[
   { label: 'ObjectPresenter', klass: ObjectPresenter },
-  { label: 'ObjectPresenter (ES6)', klass: ObjectPresenterES6 }
+  { label: 'ObjectPresenter (ES6)', klass: ObjectPresenterES6 },
 ].forEach(({ label, klass }) => {
-  const rawUser = { firstName: 'Elon', lastName: 'Musk', birthdate: 46976100000 }
+  const rawUser = {
+    firstName: 'Elon',
+    lastName: 'Musk',
+    birthdate: 46976100000,
+  }
 
   class UserPresenter extends klass {
     get fullName() {
@@ -44,6 +48,15 @@ const ObjectPresenterES6 = require('../es6')
 
     it('delegates access to object', () => {
       assert.equal(user.firstName, 'Elon')
+    })
+
+    it('serializes presented object', () => {
+      assert.deepEqual(user.serialize(), {
+        firstName: 'Elon',
+        lastName: 'Musk',
+        fullName: 'Elon Musk',
+        birthdate: 'Jun 28th 71',
+      })
     })
   })
 })
